@@ -1,0 +1,22 @@
+-- mysql programs clients
+-- ## mysql(simple cli)
+-- using mysql command line client. interactive and noninteractive tool
+-- conect to a database in local
+-- $ mysql --user=user_name --password db_name
+-- execute sql statements in a script file(batch file)
+-- $ mysql db_name < scrip.sql > output.tab
+-- connect to a database in other host
+-- % mysql --host=hosta_name --user=user_name --password=password --datanase=db_name
+-- set the prompt 
+-- mysql> prompt (\u@\h)[\d]_>
+-- executing SQL statements from a text file
+-- $ mysql db_name < text_file
+-- if you place a USE db_name statement as the first statement in the file,
+-- $ mysql --user=user_name --password=password < text_file
+-- if you are alredy running mysql, yo can execute an sql script using the source command or \. command:
+-- mysql> \. file_name
+--
+-- ## mysqladmin: A client that performs administrative operations
+-- ## mysqlcheck: A table-maintenance client that checks, repairs, analyzes, and optimizes tables.
+-- ## mysqldumps: A client that dumps a MySQL database into a file as SQL, text, or XML. 
+-- ## others: MySQL administrative and utility programs: 

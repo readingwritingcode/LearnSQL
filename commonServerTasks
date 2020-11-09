@@ -1,0 +1,80 @@
+-- # Create Mysql databases, create Mysql tables, create mysql users and view users
+
+-- log into the server
+
+mysql -u root -p
+
+-- CREATE DATABASE
+
+CREATE DATABASE dbname;
+
+-- to work with after database, type
+
+USE dbname;
+
+-- to create table in the new database, type
+
+CREATE TABLE example ( id smallint unsigned not null auto increment, name varchar(20) not null, constraint pk_example primary key (id) );
+
+-- to populate table example with data, type
+
+INSERT INTO example ( id, name ) VALUES ( null, 'sample data')
+
+USE dbname;
+
+-- to populate dbname wit data, type
+
+-- CREATE USER
+
+-- to create a database user with all permisions, use the following command, where "*.*" is "db.table"
+
+GRANT ALL PRIVILEGES ON .* TO 'username@'localhost' IDENTIFIED BY 'password';
+
+-- to log in to Mysql as the user you just created, type
+
+mysql -u username -p
+
+-- to do above things from terminal, type
+
+mysql -u username -p < example.sql
+
+-- DELETE TABLES
+
+DROP TABLE tablename;
+
+-- DELETE DATABASE
+
+DELETE DATABASE dbname;
+
+-- VIEW MYSQL USERS
+
+SELECT user FROM mysql.user GROUPBY user;
+
+-- DELETE SPECIFIC USERS
+
+DELETE FROM mysql.user WHERE user = 'username';
+
+-- VIEW USERS
+-- to list all users in a Mysql database server, type
+
+USE mysql;
+
+SELECT user FROM mysql.user;
+
+
+-- show users and other information
+
+SELECT user, host, account_locked, password_expired FROM user;
+
+-- show current user
+
+SELECT user();
+
+-- or, type
+
+SELECT current_user();
+
+-- show current logger users
+
+SELECT user, host, db, command FROM information_schema.processlist;
+
