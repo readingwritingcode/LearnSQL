@@ -6,19 +6,19 @@ mkdir install_mysql
 
 cd install_mysql
 
-#download mysqkl from oficial page
+# Download mysqkl from oficial page
 
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb
 
-#install the dwonloaded release package
+# Install the dwonloaded release package
 
 sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
 
-#update package information from the mysql apt repository
+# Update package information from the mysql apt repository
 
 sudo apt-get update
 
-#installing mysql-server pakage from MYSQL APT repository
+# Installing mysql-server pakage from MYSQL APT repository
 
 sudo apt-get install mysql-server
 
@@ -38,9 +38,9 @@ dpkg -i | grep mysql | grepii
 #or
 dpkg --get-selections | grep -v 'deinstall' | more
 
-#type sudo apt-get purge pakage name-package name
+# Type sudo apt-get purge pakage name-package name
 
-# erase config files
+# Erase config files
 sudo rm -rf /etc/mysql/var/lib/mysql
 sudo apt-get autoremove
 sudo apt-get autoclean
