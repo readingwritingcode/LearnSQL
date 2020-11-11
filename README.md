@@ -13,6 +13,7 @@ Learn basic things about Sql for develop basic Data Management skills.
   <li>Retrieving & updating BLOB in MYSQL database</li>
 </ul>
 <h2>Sample Data Base For learning</h2>
+![alt text](https://www.mysqltutorial.org/wp-content/uploads/2009/12/MySQL-Sample-Database-Schema.png)
 <img src="https://www.mysqltutorial.org/wp-content/uploads/2009/12/MySQL-Sample-Database-Schema.png"
      alt="Sample data base for learning"
      style="float: left; margin-right: 10px;" />
