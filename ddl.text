@@ -1,1 +1,14 @@
-#sintax of data definition language
+# Sintax of data definition language DDL.
+# DDL changes the structure of a table like create a table, deleting a table, altering a table etc.
+# All the commands in DDL are auto-commitment tha means it permanently save all the changes in a data base.
+
+# CREATE command; it is used to create a new table in the data base
+CREATE TABLE table_name (column_name DATETYPES[...]);
+
+# ALTER command; it is used o alter the structure of the database: modify the characteristic of an existing attribute or add new
+#to add a new column in the table
+ALTER TABLE table_name ADD(column_name DATETYPES[...]);  
+
+# DROP command
+
+# TRUNCATE
