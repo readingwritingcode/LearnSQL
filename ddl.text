@@ -5,10 +5,38 @@
 # CREATE command; it is used to create a new table in the data base
 CREATE TABLE table_name (column_name DATETYPES[...]);
 
+# Example
+CREATE TABLE candidates (
+    id INT PRIMARY KEY,
+    firts_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
+
 # ALTER command; it is used o alter the structure of the database: modify the characteristic of an existing attribute or add new
 #to add a new column in the table
-ALTER TABLE table_name ADD(column_name DATETYPES[...]);  
+ALTER TABLE table_name
+ADD [COLUMN] column_definition,
+ADD [COLUMN] column_definition,
+...;
 
-# DROP command
+# Example: in order to add the phone colum to the candidates table, type the following statemen
+ALTER TABLE candidates
+ADD COLUMN phone VARCHAR(50);
 
-# TRUNCATE
+# To add thre colums: home_addres, date_of_birth, and linkedind account to the candidates table, type
+ALTER TABLE candidates
+ADD COLUMN address VARCHAR(255),
+ADD COLUMN dob DATE,
+ADD COLUMN Linkedin_account VARCHAR(255);
+
+# DROP command; it is used to delete both the structure and record in the table.
+DROP TABLE candidates;
+
+# drop one or more columns from an existing table
+ALTER TABLE table_name
+DROP COLUMN column_name1,
+[DROP COLUMN column_name2];
+
+# TRUNCATE command; it is used to delete all the rows from the table and free the space containing the table.
+TRUNCATE TABLE candidates;
