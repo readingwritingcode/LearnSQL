@@ -10,6 +10,6 @@ mysql> create database python_mysql;
 
 mysql> use python_mysql;
 
-mysql> source ./
+mysql> source ./python_msql.sql
 
 mysql> SHOW TABLES;
