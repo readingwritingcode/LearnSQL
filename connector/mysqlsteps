@@ -1,0 +1,15 @@
+#Setting up a sample database
+
+$ wget https://sp.mysqltutorial.org/wp-content/uploads/2018/03/python_mysql.zip
+
+$ unzip python_mysql.zip
+
+$ mysql -u root -p
+
+mysql> create database python_mysql;
+
+mysql> use python_mysql;
+
+mysql> source ./
+
+mysql> SHOW TABLES;
